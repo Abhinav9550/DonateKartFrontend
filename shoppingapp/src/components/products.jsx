@@ -23,7 +23,7 @@ class Products extends Component {
   async changeCurrency(key) {
     const { data } = await axios.get(
       `https://api.exchangeratesapi.io/latest?base=INR`
-      // `http://data.fixer.io/api/convert?access_key=06600041ccdb6f4f790f91ff380c0169&from=${id}&to=${id}&amount=25/`
+      // `http://data.fixer.io/api/convert?access_key=06600041ccdb6f4f790f91ff380c0169&from=${from}&to=${to}&amount={amount}/`
     );
     console.log(data);
   }
