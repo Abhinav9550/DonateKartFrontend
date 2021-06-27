@@ -45,6 +45,7 @@ class Products extends Component {
   }
 
   render() {
+    var i = 1;
     return (
       <Container
         className="my-5"
@@ -60,14 +61,14 @@ class Products extends Component {
           }}
         >
           {this.state.data.map((x) => (
-            <Product product={x} />
+            <Product key={i++} product={x} />
           ))}
         </div>
         <div>
           <Dropdown
             className="px-1 py-5 mx-5"
             variant="pills"
-            defaultActiveKey="₹"
+            defaultactivekey="₹"
             onSelect={(keyvalue) => this.selectedKey(keyvalue)}
           >
             <Dropdown.Toggle
